@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
+import Globalstyle from './style/globalStyle';
 import { darkTheme } from './theme';
 
 ReactDOM.render(
@@ -10,6 +11,7 @@ ReactDOM.render(
     <RecoilRoot>
       <ThemeProvider theme={darkTheme}>
         <App />
+        <Globalstyle />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>,
