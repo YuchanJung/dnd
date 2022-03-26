@@ -6,7 +6,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     textColor: stirng;
     bgColor: string;
-    accentColor: string;
+    boardColor: string;
     cardBgColor: string;
     cardShadowColor: string;
   }
