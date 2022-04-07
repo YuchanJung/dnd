@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   padding-top: 10px;
   background-color: ${(props) => props.theme.boardColor};
   border-radius: 10px;
+  width: 300px;
   min-height: 300px;
 `;
 
