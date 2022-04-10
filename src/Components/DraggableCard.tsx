@@ -9,7 +9,7 @@ const Card = styled.div<{ isDragging: boolean }>`
   padding: 10px 10px;
   margin-bottom: 5px;
   box-shadow: ${(props) =>
-    props.isDragging ? "0px 2px 7px rgba(0, 0, 0, 0.5)" : "none"};
+    props.isDragging ? "0px 2px 7px rgba(0, 0, 0, 0.1)" : "none"};
 `;
 
 interface IDraggableCardProps {
