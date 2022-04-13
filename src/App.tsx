@@ -31,8 +31,9 @@ function App() {
       // same board movement
       setToDos((prevBoards) => {
         const boardCopy = [...prevBoards[source.droppableId]]; // same with destination.droppableId
+        const taskObj = boardCopy[source.index];
         boardCopy.splice(source.index, 1);
-        boardCopy.splice(destination.index, 0, draggableId);
+        boardCopy.splice(destination.index, 0, taskObj);
         const newBoards = { ...prevBoards, [source.droppableId]: boardCopy };
         return newBoards;
       });
@@ -42,8 +43,9 @@ function App() {
       setToDos((prevBoards) => {
         const destinationBoard = [...prevBoards[destination.droppableId]];
         const sourceBoard = [...prevBoards[source.droppableId]];
+        const taskObj = sourceBoard[source.index]
         sourceBoard.splice(source.index, 1);
-        destinationBoard.splice(destination.index, 0, draggableId);
+        destinationBoard.splice(destination.index, 0, taskObj);
         const newBoards = {
           ...prevBoards,
           [destination.droppableId]: destinationBoard,
